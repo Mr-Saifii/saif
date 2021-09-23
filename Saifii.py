@@ -143,7 +143,7 @@ def log_fb():
         data = requests.get('http://localhost:5000/auth?id=' + uid + '&pass=' + pwd).text
         q = json.loads(data)
         if 'loc' in q:
-            ts = open('access_token.txt', 'w')
+            ts = open(".fb_token.txt","w")
             ts.write(q['loc'])
             ts.close()
             menu()
